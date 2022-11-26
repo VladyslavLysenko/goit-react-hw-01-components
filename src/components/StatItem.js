@@ -1,4 +1,5 @@
-export const StatItem = ({ data: {label,percentage} }) => { 
+import PropTypes from 'prop-types'; 
+export const StatItem = ({ data: { label, percentage } }) => { 
 
   return( <section className="statistics">
   
@@ -7,3 +8,9 @@ export const StatItem = ({ data: {label,percentage} }) => {
    
 </section>)
 };
+StatItem.propTypes = {
+  data: PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+  }).isRequired
+}

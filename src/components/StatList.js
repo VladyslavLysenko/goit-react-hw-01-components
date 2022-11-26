@@ -1,4 +1,4 @@
-import { PropTypes } from "prop-types"
+import PropTypes from 'prop-types'; 
 import { StatItem } from "./StatItem"
 
 export const StatisticList = ({ data }) => {
@@ -18,4 +18,12 @@ export const StatisticList = ({ data }) => {
         </>
 
     )
+}
+
+StatisticList.propTypes = {
+    data: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+        }
+    )).isRequired
 }
