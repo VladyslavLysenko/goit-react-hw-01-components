@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types'; 
 export const FriendItem = ({ friend: {isOnline, avatar, name } }) => { 
 
 
@@ -9,4 +9,13 @@ export const FriendItem = ({ friend: {isOnline, avatar, name } }) => {
             <p className="name">{name}</p>
         </section>
     )
+}
+
+
+FriendItem.propTypes = {
+  friend: PropTypes.shape({
+    isOnline: PropTypes.bool.isRequired,
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired
 }
