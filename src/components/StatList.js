@@ -1,21 +1,22 @@
 import PropTypes from 'prop-types'; 
 import { StatItem } from "./StatItem"
+import { StatList, Item, StatListWrap, StatTitle } from './StatList.styled'
 
 export const StatisticList = ({ data }) => {
     return (
-        <>
-            <h2 className="title">Upload stats</h2>
-            <ul className="stat-list">
+        <StatListWrap>
+            <StatTitle>Upload stats</StatTitle>
+            <StatList>
             {data.map(item => (
-                <li key={item.id} className="item">
+                <Item key={item.id} style={{ backgroundColor: getRandomHexColor() }}>>
                     <StatItem data={item} />
                     
-                </li>
+                </Item>
             )
             )}
            
-            </ul>
-        </>
+            </StatList>
+        </StatListWrap>
 
     )
 }
@@ -26,4 +27,8 @@ StatisticList.propTypes = {
             id: PropTypes.string.isRequired,
         }
     )).isRequired
+}
+
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
