@@ -20,7 +20,8 @@ export const Item = styled.li`
 `;
 
 export const StatTitle = styled.h2`
-margin-bottom:10px;`
+margin-bottom:10px;
+color: rgba(86, 85, 86, 0.8);`
 
 export const StatListWrap = styled.div`
 display:flex;
@@ -29,6 +30,10 @@ align-items:center;
 justify-content:center;
 border: 1px solid grey;
 width:550px;
-height:225px;
+height:auto;
 margin: 50px auto;
+padding-bottom:25px;
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+
 `
