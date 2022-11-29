@@ -18,7 +18,7 @@ export const Th = styled.th`
 
 export const Tr = styled.tr`
   text-align: center;
-
+  background-color: white;
   :nth-child(2n) {
     background-color: rgb(232, 236, 235);
   }
