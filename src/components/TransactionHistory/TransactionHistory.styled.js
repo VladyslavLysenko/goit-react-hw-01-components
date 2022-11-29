@@ -10,7 +10,7 @@ export const Table = styled.table`
     color: aliceblue;
     `;
 
-    export const Th = styled.th`
+export const Th = styled.th`
   height: 30px;
   font-size: 20px;
   font-weight: 700;
@@ -18,7 +18,8 @@ export const Table = styled.table`
 
 export const Tr = styled.tr`
   text-align: center;
+
   :nth-child(2n) {
-    background-color: grey;
+    background-color: rgb(232, 236, 235);
   }
 `;
