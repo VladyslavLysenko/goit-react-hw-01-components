@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'; 
 import { StatList, Item, StatListWrap, StatTitle,Label,Percentage } from './StatList.styled'
 
-export const StatisticList = ({ data }) => {
+export const StatisticList = ({ data, title }) => {
     return (
         <StatListWrap>
-            <StatTitle>Upload stats</StatTitle>
+            {title && <StatTitle>{title}</StatTitle>}
             <StatList>
                 {data.map(item => (<Item key={item.id} style={{ backgroundColor: getRandomHexColor() }}>
                     <Label> {item.label} </Label>
@@ -31,4 +31,7 @@ StatisticList.propTypes = {
         )).isRequired
 }
 
+StatListWrap.propTypes = {
+    title: PropTypes.string.isRequired
+}
 

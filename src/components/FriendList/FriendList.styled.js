@@ -7,7 +7,6 @@ list-style: none;
 align-items: center;
 
  `
-
 export const FriendListLi = styled.li`
 display:flex;
 margin-bottom:20px;
