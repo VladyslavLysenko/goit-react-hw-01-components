@@ -3,11 +3,11 @@ import { StatisticList } from "../StatList/StatList";
 import { FriendList } from "../FriendList/FriendList";
 import { TransactionHistory } from "../TransactionHistory/TransactionHistory";
 
-import user from 'components/DataBase/user.json';
-import data from 'components/DataBase/data.json';
-import friends from 'components/DataBase/friends.json'
-import transactions from 'components/DataBase/transactions.json';
-import { GlobalStyle } from "../GlobalStyle/GlobalStyle";
+import user from 'dataBase/user.json';
+import data from 'dataBase/data.json';
+import friends from 'dataBase/friends.json';
+import transactions from 'dataBase/transactions.json';
+import { GlobalStyle } from "../../GlobalStyle";
 
 
 export const App = () => {
