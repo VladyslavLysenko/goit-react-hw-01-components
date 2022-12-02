@@ -4,6 +4,7 @@ import { FriendListUl, FriendListLi, StatusIconOnline, StatusIconOffline } from 
 import { FriendItem } from 'components/FriendItem/FriendItem';
 
 export const FriendList = ({ friends }) => {
+
     return (
         <FriendListUl>
             {friends.map(friend => (
