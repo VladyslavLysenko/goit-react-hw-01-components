@@ -1,16 +1,20 @@
-import PropTypes from 'prop-types'; 
+import PropTypes from 'prop-types';
 import { BsFillBrightnessHighFill, BsFillDashCircleFill } from "react-icons/bs";
-
-import { FriendListUl,FriendListLi,Name, Avatar,StatusIconOnline, StatusIconOffline } from './FriendList.styled';
+import { FriendListUl, FriendListLi, StatusIconOnline, StatusIconOffline } from './FriendList.styled';
+import { FriendItem } from 'components/FriendItem/FriendItem';
 
 export const FriendList = ({ friends }) => {
     return (
         <FriendListUl>
             {friends.map(friend => (
                 <FriendListLi key={friend.id}>
-                    <span className="status">{friend.isOnline ? <StatusIconOnline><BsFillBrightnessHighFill size='25' /><span>Online</span></StatusIconOnline> : <StatusIconOffline><BsFillDashCircleFill size='20' />  Offline</StatusIconOffline>} </span>
-                    <Avatar src={friend.avatar} alt="User avatar" width="50" height="auto" />
-                    <Name>{friend.name}</Name>
+                   <span className="status">{friend.isOnline
+                ? <StatusIconOnline><BsFillBrightnessHighFill size='25' /><span>Online</span></StatusIconOnline> 
+                : <StatusIconOffline><BsFillDashCircleFill size='20' />  Offline</StatusIconOffline>} </span>
+                    <FriendItem
+                        avatar={friend.avatar}
+                        name={friend.name}
+                        />
                 </FriendListLi>
             )
             )}
