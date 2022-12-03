@@ -24,18 +24,3 @@ padding-right:15px;
 
 `
 
-export const StatusIconOnline = styled.div`
-color:green;
-display:flex;
-justify-content:center;
-align-items:center;
-gap:10px;
-`
-
-export const StatusIconOffline = styled.div`
-color:red;
-display:flex;
-justify-content:center;
-align-items:center;
-gap:10px;
-`

@@ -6,9 +6,9 @@ export const StatisticList = ({ data, title }) => {
         <StatListWrap>
             {title && <StatTitle>{title}</StatTitle>}
             <StatList>
-                {data.map(item => (<Item key={item.id} style={{ backgroundColor: getRandomHexColor() }}>
-                    <Label> {item.label} </Label>
-                    <Percentage> {item.percentage}%</Percentage>
+                {data.map(({id, label, percentage}) => (<Item key={id} style={{ backgroundColor: getRandomHexColor() }}>
+                    <Label> {label} </Label>
+                    <Percentage> {percentage}%</Percentage>
                 </Item>
                 )
                 )}
@@ -28,10 +28,7 @@ StatisticList.propTypes = {
             label: PropTypes.string.isRequired,
             percentage: PropTypes.number.isRequired,
         }
-        )).isRequired
-}
-
-StatListWrap.propTypes = {
-    title: PropTypes.string.isRequired
+        )).isRequired,
+     title: PropTypes.string.isRequired,
 }
 
